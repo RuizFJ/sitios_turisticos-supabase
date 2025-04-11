@@ -52,6 +52,20 @@ export function useCiudades() {
         }
         return error;
     };
-    return {data,error,registrarCiudad, eliminarCiudad};
+
+    const obtenerCiudadById = async (id: number) => {
+        const { data, error } = await client
+            .from("ciudad")
+            .select("*")
+            .eq("id", id)
+            .single();
+        if (error) {
+            alert("Error al obtener la ciudad");
+            console.error("Error al obtener la ciudad:", error);
+            return null;
+        } 
+        return data || null;
+    };
+    return {data,error,registrarCiudad, eliminarCiudad, obtenerCiudadById};
 
 }
