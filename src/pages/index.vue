@@ -1,10 +1,12 @@
 <template>
-    <AppHeader />
-    <h1>Index</h1>
+    <AppSideBar />
+   
     
 </template>
 
 <script lang="ts" setup>
+
+navigateTo('/sitios-turisticos')
 
 
 </script>

@@ -22,7 +22,7 @@
                             <NuxtLink class="nav-link" to="/categorias/registrar">Registrar Categoria</NuxtLink>
                         </li>
                         <li class="nav-item">
-                            <NuxtLink class="nav-link" to="/ciudades">Ciudades</NuxtLink>
+                            <NuxtLink class="nav-link" to="/">Ciudades</NuxtLink>
                         </li>
                         <li class="nav-item">
                             <NuxtLink class="nav-link" to="/ciudades/registrar">Registrar Ciudad</NuxtLink>

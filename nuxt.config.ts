@@ -10,11 +10,25 @@ export default defineNuxtConfig({
  
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  css: ["bootstrap/dist/css/bootstrap.min.css"],
+  css: ["bootstrap/dist/css/bootstrap.min.css",'boxicons/css/boxicons.min.css',
+    '~/assets/scss/main.scss'],
   build: {
     transpile: ["bootstrap",'@fortawesome/vue-fontawesome'],
     
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "~/assets/scss/variables" as *;
+          `
+        }
+      }
+    }
+  },
+  
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseKey: process.env.SUPABASE_KEY,

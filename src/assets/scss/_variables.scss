@@ -1,0 +1,35 @@
+
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*=============== VARIABLES SASS ===============*/
+$colors: (
+  primary: hsl(228, 81%, 49%),
+  title: hsl(228, 12%, 15%),
+  text: hsl(228, 8%, 50%),
+  body: hsl(228, 100%, 99%),
+  container: #fff
+);
+
+$font: (
+  family: 'Poppins',
+  size-normal: 0.938rem,
+  size-large: 1rem
+);
+
+$layout: (
+  nav-width: 84px,
+  nav-width-expanded: 255px,
+  toggle-size: 20px
+);
+
+// Funciones de ayuda
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function font($key) {
+  @return map-get($font, $key);
+}
+

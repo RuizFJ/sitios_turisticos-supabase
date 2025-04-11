@@ -50,6 +50,20 @@ export function useCategorias() {
         }
         return error;
     };
-    return {data,error,registrarCategoria, eliminarCategoria};
+
+    const obtenerCategoriaById = async (id: number) => {
+        const { data, error } = await client
+            .from("categoria")
+            .select("*")
+            .eq("id", id)
+            .single();
+        if (error) {
+            alert("Error al obtener la categoria");
+            console.error("Error al obtener la categoria:", error);
+            return null;
+        }
+        return data;
+    };
+    return {data,error,registrarCategoria, eliminarCategoria, obtenerCategoriaById};
 
 }
